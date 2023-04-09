@@ -1,0 +1,14 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"a"> {
+  myProp?: boolean;
+}
+---
+
+<a
+  {...Astro.props}
+  class={"relative outline-none after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[10%] after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-200 hover:after:scale-x-100 focus:after:scale-x-100 dark:after:bg-current"}
+>
+  <slot />
+</a>

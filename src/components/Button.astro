@@ -1,0 +1,75 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+import { cva } from "class-variance-authority";
+import type { VariantProps } from "class-variance-authority";
+
+type DefaultButtonProps = HTMLAttributes<"button">;
+
+export interface Props extends HTMLAttributes<"a" | "button">, VariantProps<typeof button> {
+  href?: string;
+}
+
+const button = cva(
+  [
+    "font-semibold",
+    "text-center",
+    "rounded",
+    "px-[0.75em]",
+    "py-[0.25em]",
+    "whitespace-nowrap",
+    "transition-transform",
+    "hover:-translate-y-1",
+    "active:translate-y-0",
+    "focus-visible:outline-red-500",
+    "focus-visible:-translate-y-1",
+  ],
+  {
+    variants: {
+      intent: {
+        primary: ["bg-stone-100", "hover:bg-stone-100/80", "text-black"],
+        outline: ["bg-transparent", "text-blue-600", "outline", "outline-red-300"],
+      },
+      size: {
+        small: ["text-sm"],
+        medium: ["text-base"],
+        large: ["text-lg"],
+      },
+      uppercase: {
+        true: "uppercase",
+      },
+    },
+    defaultVariants: {
+      intent: "primary",
+      size: "medium",
+    },
+  }
+);
+
+const {
+  href,
+  intent,
+  size,
+  uppercase,
+  class: className,
+  ...attrs
+} = Astro.props as Props;
+
+const buttonClass = `${button({
+  intent,
+  size,
+  uppercase,
+})} ${className}`;
+---
+
+{
+  href ? (
+    <a {...attrs} href={href} class={buttonClass}>
+      <slot />
+    </a>
+  ) : (
+    <button {...(attrs as DefaultButtonProps)} class={buttonClass}>
+      <slot />
+    </button>
+  )
+}

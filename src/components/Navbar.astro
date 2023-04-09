@@ -1,0 +1,43 @@
+---
+import Button from "@/components/Button.astro";
+import LinkWithUnderline from "@/components/LinkWithUnderline.astro";
+import Logo from "@/components/Logo.astro";
+
+const links = [
+  {
+    label: "About",
+    href: "/",
+  },
+  {
+    label: "Pricing",
+    href: "/",
+  },
+  {
+    label: "Contact",
+    href: "/",
+  },
+  {
+    label: "Help",
+    href: "/",
+  },
+];
+---
+
+<nav class="wrapper flex justify-between gap-4 py-4">
+  <a href={"/"}>
+    <Logo />
+  </a>
+
+  <ul class="flex items-center gap-9 font-semibold text-slate-400">
+    {
+      links.map((link) => (
+        <li class="hidden md:block">
+          <LinkWithUnderline href={link.href}>{link.label}</LinkWithUnderline>
+        </li>
+      ))
+    }
+    <li class="ml-6">
+      <Button intent={"outline"}>Get in touch</Button>
+    </li>
+  </ul>
+</nav>
