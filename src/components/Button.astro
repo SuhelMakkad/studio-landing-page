@@ -16,9 +16,10 @@ const button = cva(
     "text-center",
     "rounded",
     "px-[0.75em]",
-    "py-[0.25em]",
+    "py-[0.6em]",
+    "leading-none",
     "whitespace-nowrap",
-    "transition-transform",
+    "transition-[transform,background-color]",
     "hover:-translate-y-1",
     "active:translate-y-0",
     "focus-visible:outline-red-500",
@@ -27,16 +28,19 @@ const button = cva(
   {
     variants: {
       intent: {
-        primary: ["bg-stone-100", "hover:bg-stone-100/80", "text-black"],
+        primary: ["bg-blue-500", "text-white", "hover:bg-blue-600", "text-black"],
         outline: ["bg-transparent", "text-blue-600", "outline", "outline-red-300"],
       },
       size: {
         small: ["text-sm"],
         medium: ["text-base"],
-        large: ["text-lg"],
+        large: ["text-xl"],
       },
       uppercase: {
         true: "uppercase",
+      },
+      capitalize: {
+        true: "capitalize",
       },
     },
     defaultVariants: {
@@ -51,6 +55,7 @@ const {
   intent,
   size,
   uppercase,
+  capitalize,
   class: className,
   ...attrs
 } = Astro.props as Props;
@@ -59,6 +64,7 @@ const buttonClass = `${button({
   intent,
   size,
   uppercase,
+  capitalize,
 })} ${className}`;
 ---
 

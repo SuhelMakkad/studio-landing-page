@@ -1,0 +1,10 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+export type Props = HTMLAttributes<"span">
+
+const {class: className, ...attrs} = Astro.props; 
+---
+<span {...attrs} class={`text-sm text-slate-400 font-bold ${className}`}>
+  <slot />
+</span>

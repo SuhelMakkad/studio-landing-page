@@ -1,14 +1,42 @@
 ---
+import Button from "@/components/Button.astro";
 import H1 from "@/components/heading/H1.astro";
 import Layout from "@/layouts/Layout.astro";
+import Image from "@/components/Image.astro";
+import Tag from "@/components/heading/Tag.astro";
 
 import "@/styles/global.css";
+import Testimonial from "@/components/Testimonial.astro";
 ---
 
 <Layout title="Home">
-  <H1 />
+  <section class="lg:grid grid-cols-2 mt-10">
+    <div class="flex flex-col gap-8 lg:gap-4 lg:w-3/4">
+      <Tag>DESIGN INSPIRATION</Tag>
 
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ab possimus cumque earum, eaque
-  harum ex magni. Possimus ex repellendus provident, voluptas eius veritatis totam, laborum facere
-  culpa necessitatibus tempore?
+      <H1>Convallis turpis erat tempus, viverra aliquet.</H1>
+
+      <div class="mt-6">
+        <Button capitalize size={"large"}>Get in touch</Button>
+      </div>
+
+      <div class="lg:mt-auto mt-8 max-w-sm">
+        <Testimonial
+          user={{
+            userImg: "/img/user/andry.png",
+            name: "andry ford",
+            title: "CEO at Whatever",
+          }}
+          message="I feel so much less stressed ❤️ as I now know by the book.”"
+        />
+      </div>
+    </div>
+
+    <Image
+      src="/img/watch-bg.jpg"
+      class="rounded-lg mt-4 lg:mt-0 w-auto mx-auto block"
+      height={940}
+      width={827}
+    />
+  </section>
 </Layout>

@@ -1,0 +1,15 @@
+---
+import User, { type Props as UserProps } from "@/components/User.astro";
+
+export type Props = {
+  user: UserProps;
+  message: string;
+};
+
+const { user, message } = Astro.props;
+---
+
+<div class="space-y-3">
+  <span class="text-2xl font-semibold">{message}</span>
+  <User {...user} />
+</div>
