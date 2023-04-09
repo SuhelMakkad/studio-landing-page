@@ -6,4 +6,8 @@
   .wrapper {
     @apply max-w-7xl mx-auto px-3 md:px-5 lg:px-8;
   }
+
+  .clip-full-w {
+    clip-path: inset(0px -100vmax);
+  }
 }

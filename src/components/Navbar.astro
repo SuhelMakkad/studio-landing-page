@@ -23,21 +23,45 @@ const links = [
 ];
 ---
 
-<nav class="wrapper flex justify-between gap-4 py-4">
-  <a href={"/"}>
-    <Logo />
-  </a>
+<span id="nav-tracker" class="peer"></span>
+<div
+  class="w-screen fixed -top-px left-0 right-0 transition-[background-color] bg-transparent shadow-transparent duration-300 peer-data-[active=true]:bg-amber-200/70 backdrop-filter backdrop-blur-[6px]"
+>
+  <nav id="nav" class="wrapper flex justify-between gap-4 py-4">
+    <a href={"/"}>
+      <Logo />
+    </a>
 
-  <ul class="flex items-center gap-9 font-semibold text-slate-400">
-    {
-      links.map((link) => (
-        <li class="hidden md:block">
-          <LinkWithUnderline href={link.href}>{link.label}</LinkWithUnderline>
-        </li>
-      ))
-    }
-    <li class="ml-6">
-      <Button intent={"outline"}>Get in touch</Button>
-    </li>
-  </ul>
-</nav>
+    <ul class="flex items-center gap-9 font-semibold text-slate-500">
+      {
+        links.map((link) => (
+          <li class="hidden md:block">
+            <LinkWithUnderline href={link.href}>{link.label}</LinkWithUnderline>
+          </li>
+        ))
+      }
+      <li class="ml-6">
+        <Button intent={"outline"}>Get in touch</Button>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<script>
+  const navTracker = document.querySelector("#nav-tracker")!;
+
+  const options = {
+    rootMargin: "0px",
+    threshold: 1.0,
+  };
+
+  const callback = (entier: IntersectionObserverEntry[]) => {
+    const entry = entier[0];
+    const { isIntersecting } = entry;
+
+    navTracker.setAttribute("data-active", isIntersecting ? "false" : "true");
+  };
+
+  const observer = new IntersectionObserver(callback, options);
+  observer.observe(navTracker);
+</script>
