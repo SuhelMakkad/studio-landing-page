@@ -1,15 +1,17 @@
 ---
-import Gradient from "@/components/Gradient.astro";
-import Button from "@/components/Button.astro";
-import H1 from "@/components/heading/H1.astro";
+import { images } from "@/utils/imgData";
+
 import Layout from "@/layouts/Layout.astro";
-import Image from "@/components/Image.astro";
+import Gradient from "@/components/Gradient.astro";
+import H1 from "@/components/heading/H1.astro";
+import H2 from "@/components/heading/H2.astro";
+import Button from "@/components/Button.astro";
 import Tag from "@/components/heading/Tag.astro";
+import Image from "@/components/Image.astro";
 import Testimonial from "@/components/Testimonial.astro";
+import LinkWithUnderline from "@/components/LinkWithUnderline.astro";
 
 import "@/styles/global.css";
-import H2 from "@/components/heading/H2.astro";
-import LinkWithUnderline from "@/components/LinkWithUnderline.astro";
 ---
 
 <Layout title="Home">
@@ -30,7 +32,7 @@ import LinkWithUnderline from "@/components/LinkWithUnderline.astro";
       <div class="lg:mt-auto mt-8 max-w-sm text-start">
         <Testimonial
           user={{
-            userImg: "/img/user/andry.png",
+            userImg: images.users.andry.src,
             name: "andry ford",
             title: "CEO at Whatever",
           }}
@@ -40,16 +42,14 @@ import LinkWithUnderline from "@/components/LinkWithUnderline.astro";
     </div>
 
     <Image
-      src="/img/product/watch.jpg"
+      {...images.products.watch}
       class="block mt-4 lg:mt-0 w-auto mx-auto max-h-[30rem] lg:max-h-none"
-      height={940}
-      width={827}
     />
   </section>
 
   <section class="lg:grid grid-cols-3 grid-rows-6 mt-32 gap-x-6 lg:space-y-0">
     <div class="col-span-1 row-start-2 row-end-5 hidden lg:block">
-      <Image src="/img/models/potrait/1.jpg" height={518} width={440} />
+      <Image {...images.portraitModels.gray} />
     </div>
 
     <header class="col-start-2 col-span-2 row-start-1 lg:ml-28 leading-loose">
@@ -63,7 +63,7 @@ import LinkWithUnderline from "@/components/LinkWithUnderline.astro";
     </p>
 
     <div class="row-start-4 col-span-2 row-span-3">
-      <Image src="/img/models/landscape/1.jpg" height={518} width={910} />
+      <Image {...images.landscapeModels.green} />
     </div>
   </section>
 
@@ -84,7 +84,7 @@ import LinkWithUnderline from "@/components/LinkWithUnderline.astro";
       </div>
     </div>
 
-    <Image class="self-center -order-1" src="/img/product/tab.jpg" height={675} width={675} />
+    <Image class="self-center -order-1" {...images.products.tab} />
   </section>
 
   <section class="md:grid grid-cols-2 gap-8 mt-40 space-y-8 md:space-y-0">
@@ -104,7 +104,7 @@ import LinkWithUnderline from "@/components/LinkWithUnderline.astro";
       </div>
     </div>
 
-    <Image class="self-center" src="/img/product/watch.jpg" height={940} width={827} />
+    <Image class="self-center" {...images.products.watch} />
   </section>
 
   <section class="min-h-screen"></section>
