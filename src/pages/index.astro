@@ -9,6 +9,7 @@ import Testimonial from "@/components/Testimonial.astro";
 
 import "@/styles/global.css";
 import H2 from "@/components/heading/H2.astro";
+import LinkWithUnderline from "@/components/LinkWithUnderline.astro";
 ---
 
 <Layout title="Home">
@@ -66,5 +67,45 @@ import H2 from "@/components/heading/H2.astro";
     </div>
   </section>
 
-  <section></section>
+  <section class="md:grid grid-cols-2 gap-8 mt-40 space-y-8 md:space-y-0">
+    <div class="self-center space-y-8">
+      <header>
+        <H2>Requirements gathering and analysis for references.</H2>
+      </header>
+      <p class="text-lg">
+        Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum malesuada
+        duis volutpat.
+      </p>
+
+      <div>
+        <LinkWithUnderline class="text-blue-500 font-bold underline" href="/">
+          Experianced team
+        </LinkWithUnderline>
+      </div>
+    </div>
+
+    <Image class="self-center -order-1" src="/img/product/tab.jpg" height={675} width={675} />
+  </section>
+
+  <section class="md:grid grid-cols-2 gap-8 mt-40 space-y-8 md:space-y-0">
+    <div class="self-center space-y-8">
+      <header>
+        <H2>The best design for your studio website</H2>
+      </header>
+      <p class="text-lg">
+        Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum malesuada
+        duis volutpat.
+      </p>
+
+      <div>
+        <LinkWithUnderline class="text-blue-500 font-bold underline" href="/">
+          Experianced team
+        </LinkWithUnderline>
+      </div>
+    </div>
+
+    <Image class="self-center" src="/img/product/watch.jpg" height={940} width={827} />
+  </section>
+
+  <section class="min-h-screen"></section>
 </Layout>
