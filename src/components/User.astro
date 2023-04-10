@@ -11,7 +11,7 @@ const { userImg, name, title } = Astro.props;
 ---
 
 <div class="flex items-center gap-2 capitalize">
-  <Image class="max-h-14 w-auto" src={userImg} height={85} width={82} />
+  <Image class="max-h-14 w-auto" fullSize={false} src={userImg} height={85} width={82} />
   <div class="flex flex-col gap-1">
     <span class="font-bold leading-none text-lg">{name}</span>
     <span class="leading-none text-sm">{title}</span>
