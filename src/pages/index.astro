@@ -10,11 +10,12 @@ import Tag from "@/components/heading/Tag.astro";
 import Image from "@/components/Image.astro";
 import Testimonial from "@/components/Testimonial.astro";
 import LinkWithUnderline from "@/components/LinkWithUnderline.astro";
-
-import "@/styles/global.css";
 import Card from "@/components/Card.astro";
 import CarouselWrapper from "@/components/carousel/CarouselWrapper.astro";
 import CarouselItem from "@/components/carousel/CarouselItem.astro";
+import LandscapeBanner from "@/components/LandscapeBanner.astro";
+
+import "@/styles/global.css";
 ---
 
 <Layout title="Home">
@@ -136,5 +137,12 @@ import CarouselItem from "@/components/carousel/CarouselItem.astro";
           ))
       }
     </CarouselWrapper>
+  </section>
+
+  <section class="mt-40">
+    <LandscapeBanner
+      heading="All-in-one platform for business"
+      description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium provident ipsa non quam corporis suscipit beatae quod delectus repudiandae officia alias consectetur corrupti voluptas quaerat, aliquam possimus nisi minima laborum."
+    />
   </section>
 </Layout>

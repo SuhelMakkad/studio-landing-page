@@ -1,0 +1,35 @@
+---
+import Button from "./Button.astro";
+
+export type Props = {
+  heading: string;
+  description: string;
+};
+
+const { heading, description } = Astro.props;
+---
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 bg-amber-100 p-14 rounded-lg relative isolate">
+  <svg
+    class="absolute right-0 top-0 -z-10"
+    width="316"
+    height="179"
+    viewBox="0 0 316 179"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M0.999967 -38.4059C76.1437 -43.3829 251.269 -84.6955 247.684 61.0771C245.37 155.193 141.923 166.71 131 113.824C120.077 60.9381 297.93 50.3026 397.873 174.84"
+      stroke="white"
+      stroke-width="8"></path>
+  </svg>
+
+  <div class="col-span-1 md:col-span-2 flex flex-col gap-4">
+    <h6 class="font-semibold text-4xl">{heading}</h6>
+    <p class="text-lg">{description}</p>
+  </div>
+
+  <div class="col-span-1 text-center">
+    <Button capitalize size={"large"}>Get in touch</Button>
+  </div>
+</div>
