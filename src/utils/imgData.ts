@@ -5,6 +5,11 @@ export const images = {
       height: 85,
       width: 82,
     },
+    andry2: {
+      src: "/img/user/andry-2.png",
+      height: 85,
+      width: 82,
+    },
   },
   products: {
     tab: {
