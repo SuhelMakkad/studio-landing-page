@@ -12,6 +12,9 @@ import Testimonial from "@/components/Testimonial.astro";
 import LinkWithUnderline from "@/components/LinkWithUnderline.astro";
 
 import "@/styles/global.css";
+import Card from "@/components/Card.astro";
+import CarouselWrapper from "@/components/carousel/CarouselWrapper.astro";
+import CarouselItem from "@/components/carousel/CarouselItem.astro";
 ---
 
 <Layout title="Home">
@@ -107,5 +110,33 @@ import "@/styles/global.css";
     <Image class="self-center" {...images.products.watch} />
   </section>
 
-  <section class="min-h-screen"></section>
+  <section class="mt-40">
+    <div class="text-center">
+      <Tag>DESIGN CONCEPT</Tag>
+
+      <header class="mt-4">
+        <H2>
+          The best design for your
+          <br /> studio website
+        </H2>
+      </header>
+    </div>
+
+    <CarouselWrapper>
+      {
+        Array(10)
+          .fill(0)
+          .map((_, index) => (
+            <CarouselItem>
+              <Card
+                title={`Name ${index + 1}`}
+                description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem maiores rerum eum magnam dolorem consequuntur sequi dolore obcaecati molestias enim tempore nemo aut et, accusamus perspiciatis dolores ullam delectus pariatur."
+              />
+            </CarouselItem>
+          ))
+      }
+    </CarouselWrapper>
+
+    <section class="min-h-screen"></section>
+  </section>
 </Layout>
