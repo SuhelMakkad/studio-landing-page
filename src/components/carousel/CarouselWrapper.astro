@@ -1,3 +1,52 @@
-<ul class="flex gap-4 -mx-3 md:-mx-5 lg:-mx-8 py-12 px-8 overflow-y-auto scroll-hidden">
+---
+import LeftArrow from "@/components/icon/LeftArrow.astro";
+---
+
+<ul
+  class="carousel-list flex gap-4 -mx-3 md:-mx-5 lg:-mx-8 px-3 md:px-5 lg:px-8 py-12 overflow-y-auto scroll-smooth scroll-hidden"
+>
   <slot />
 </ul>
+
+<div class="flex gap-4 text-2xl text-gray-500">
+  <button data-left-btn class="transition-colors hover:text-blue-500">
+    <LeftArrow />
+  </button>
+
+  <button data-right-btn class="rotate-180 transition-colors hover:text-blue-500">
+    <LeftArrow />
+  </button>
+</div>
+
+<script>
+  const moveLeftButtons = document.querySelectorAll("[data-left-btn]")!;
+  const moveRightButtons = document.querySelectorAll("[data-right-btn]")!;
+
+  moveLeftButtons.forEach((moveLeftButton) => {
+    moveLeftButton.addEventListener("click", function (this: HTMLButtonElement) {
+      const clickedBtn = this;
+      if (!clickedBtn || !clickedBtn.parentElement || !clickedBtn.parentElement.parentElement) {
+        return;
+      }
+
+      const ul = clickedBtn.parentElement.parentElement.querySelector("ul");
+      if (!ul) return;
+
+      ul.scrollLeft -= ul.clientWidth;
+    });
+  });
+
+  moveRightButtons.forEach((moveRightButton) => {
+    moveRightButton.addEventListener("click", function (this: HTMLButtonElement) {
+      const clickedBtn = this;
+      if (!clickedBtn || !clickedBtn.parentElement || !clickedBtn.parentElement.parentElement) {
+        return;
+      }
+
+      const ul = clickedBtn.parentElement.parentElement.querySelector("ul");
+      if (!ul) return;
+
+      ul.scrollLeft += ul.clientWidth;
+    });
+  });
+</script>
