@@ -1,0 +1,92 @@
+---
+import Logo from "@/components/Logo.astro";
+import LinkWithUnderline from "@/components/LinkWithUnderline.astro";
+
+const linksLists = [
+  {
+    title: "pages",
+    links: [
+      {
+        label: "About",
+      },
+      {
+        label: "Pricing",
+      },
+      {
+        label: "Contact",
+      },
+      {
+        label: "Help",
+      },
+    ],
+  },
+  {
+    title: "Demos",
+    links: [
+      {
+        label: "Dark theme",
+      },
+      {
+        label: "Light theme",
+      },
+    ],
+  },
+  {
+    title: "Resources",
+    links: [
+      {
+        label: "Documentation",
+      },
+      {
+        label: "User Guide",
+      },
+    ],
+  },
+];
+---
+
+<footer class="bg-neutral-800 text-neutral-400 text-lg mt-36 text-center md:text-start ">
+  <section class="wrapper grid grid-cols-1 lg:grid-cols-2 gap-20 py-10">
+    <div>
+      <div class="mb-8 lg:mb-12 text-white">
+        <a href="/">
+          <Logo />
+        </a>
+      </div>
+      <p>
+        The best design for your web studio website. Vitae nulla nunc euismod vel pretium tellus
+        accumsan semper. Vitae nulla nunc euismod vel pretium tellus accumsan semper.
+      </p>
+    </div>
+
+    <ul class="flex flex-wrap gap-20 justify-center md:justify-between capitalize whitespace-nowrap">
+      {
+        linksLists.map((linksList) => (
+          <li>
+            <span class="font-bold text-white block mb-8 lg:mb-12">{linksList.title}</span>
+            <ul class="font-semibold space-y-1">
+              {linksList.links.map((link) => (
+                <li>
+                  <LinkWithUnderline href="/">{link.label}</LinkWithUnderline>
+                </li>
+              ))}
+            </ul>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <span class="block border-t border-neutral-500"></span>
+  <section class="flex flex-col items-center md:flex-row-reverse justify-between gap-4 py-4 wrapper">
+    <LinkWithUnderline href="/" class="font-bold">Terms of Service</LinkWithUnderline>
+    
+    <span>
+      © <span id="copyright-year"></span> All Rights Reserved.
+    </span>
+  </section>
+</footer>
+
+<script>
+  document.getElementById("copyright-year")!.innerText = new Date().getFullYear().toString();
+</script>

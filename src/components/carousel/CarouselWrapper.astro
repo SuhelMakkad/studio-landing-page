@@ -46,7 +46,7 @@ import LeftArrow from "@/components/icon/LeftArrow.astro";
       const ul = clickedBtn.parentElement.parentElement.querySelector("ul");
       if (!ul) return;
 
-      ul.scrollLeft += ul.clientWidth;
+      ul.scrollLeft += ul.clientWidth * 0.75;
     });
   });
 </script>
