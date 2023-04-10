@@ -40,22 +40,22 @@ import H2 from "@/components/heading/H2.astro";
 
     <Image
       src="/img/watch-bg.jpg"
-      class="mt-4 lg:mt-0 w-auto mx-auto block"
+      class="block mt-4 lg:mt-0 w-auto mx-auto max-h-[30rem] lg:max-h-none"
       height={940}
       width={827}
     />
   </section>
 
-  <section class="lg:grid grid-cols-3 grid-rows-6 mt-32 gap-x-6">
-    <div class="col-span-1 row-start-2 row-end-5">
+  <section class="lg:grid grid-cols-3 grid-rows-6 mt-32 gap-x-6 lg:space-y-0">
+    <div class="col-span-1 row-start-2 row-end-5 hidden lg:block">
       <Image src="/img/models/potrait/1.jpg" height={518} width={440} />
     </div>
 
-    <header class="col-start-2 col-span-2 row-start-1 ml-28 leading-loose">
+    <header class="col-start-2 col-span-2 row-start-1 lg:ml-28 leading-loose">
       <H2>Requirements gathering and analysis for references.</H2>
     </header>
 
-    <p class="col-start-2 col-span-2 row-start-2 text-lg ml-28">
+    <p class="col-start-2 col-span-2 row-start-2 text-lg lg:ml-28 mt-6 mb-10 lg:my-0">
       Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum malesuada
       a, duis volutpat. Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit
       ipsum malesuada a, duis volutpat.
