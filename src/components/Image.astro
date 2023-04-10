@@ -1,7 +1,9 @@
 ---
-import type { HTMLAttributes } from 'astro/types';
+import type { HTMLAttributes } from "astro/types";
 
-export type Props = HTMLAttributes<"img">;
+export type Props = { rounded?: boolean } & HTMLAttributes<"img">;
+
+const { rounded = true, class: className, ...attrs } = Astro.props;
 ---
 
-<img {...Astro.props}/>
+<img class={`${rounded ? "rounded-lg" : ""} ${className}`} {...attrs} />

@@ -1,13 +1,14 @@
 ---
+import Gradient from "@/components/Gradient.astro";
 import Button from "@/components/Button.astro";
 import H1 from "@/components/heading/H1.astro";
 import Layout from "@/layouts/Layout.astro";
 import Image from "@/components/Image.astro";
 import Tag from "@/components/heading/Tag.astro";
+import Testimonial from "@/components/Testimonial.astro";
 
 import "@/styles/global.css";
-import Testimonial from "@/components/Testimonial.astro";
-import Gradient from "@/components/Gradient.astro";
+import H2 from "@/components/heading/H2.astro";
 ---
 
 <Layout title="Home">
@@ -17,7 +18,9 @@ import Gradient from "@/components/Gradient.astro";
     <div class="flex flex-col gap-8 lg:gap-4 lg:w-3/4 text-center md:text-start">
       <Tag>DESIGN INSPIRATION</Tag>
 
-      <H1>Convallis turpis erat tempus, viverra aliquet.</H1>
+      <header>
+        <H1>Convallis turpis erat tempus, viverra aliquet.</H1>
+      </header>
 
       <div class="mt-6">
         <Button capitalize size={"large"}>Get in touch</Button>
@@ -37,12 +40,31 @@ import Gradient from "@/components/Gradient.astro";
 
     <Image
       src="/img/watch-bg.jpg"
-      class="rounded-lg mt-4 lg:mt-0 w-auto mx-auto block"
+      class="mt-4 lg:mt-0 w-auto mx-auto block"
       height={940}
       width={827}
     />
   </section>
 
-  <section class="min-h-screen"></section>
+  <section class="lg:grid grid-cols-3 grid-rows-6 mt-32 gap-x-6">
+    <div class="col-span-1 row-start-2 row-end-5">
+      <Image src="/img/models/potrait/1.jpg" height={518} width={440} />
+    </div>
+
+    <header class="col-start-2 col-span-2 row-start-1 ml-28 leading-loose">
+      <H2>Requirements gathering and analysis for references.</H2>
+    </header>
+
+    <p class="col-start-2 col-span-2 row-start-2 text-lg ml-28">
+      Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum malesuada
+      a, duis volutpat. Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit
+      ipsum malesuada a, duis volutpat.
+    </p>
+
+    <div class="row-start-4 col-span-2 row-span-3">
+      <Image src="/img/models/landscape/1.jpg" height={518} width={910} />
+    </div>
+  </section>
+
   <section class="min-h-screen"></section>
 </Layout>
