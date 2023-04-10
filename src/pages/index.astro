@@ -16,6 +16,7 @@ import CarouselItem from "@/components/carousel/CarouselItem.astro";
 import LandscapeBanner from "@/components/LandscapeBanner.astro";
 
 import "@/styles/global.css";
+import UserCard from "@/components/UserCard.astro";
 ---
 
 <Layout title="Home">
@@ -53,7 +54,7 @@ import "@/styles/global.css";
 
   <section class="lg:grid grid-cols-3 grid-rows-6 mt-32 gap-x-6 lg:space-y-0">
     <div class="col-span-1 row-start-2 row-end-5 hidden lg:block">
-      <Image {...images.portraitModels.gray} />
+      <Image {...images.portraitModels.ceo1} />
     </div>
 
     <header class="col-start-2 col-span-2 row-start-1 lg:ml-28 leading-loose">
@@ -150,7 +151,14 @@ import "@/styles/global.css";
       </p>
     </div>
 
-    <div class="max-w-2xl mx-auto space-y-16 mt-24">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 justify-center gap-4 mt-24">
+      <UserCard src={images.portraitModels.ceo5.src} name="Andry Ford" title="CEO At Whatever" />
+      <UserCard src={images.portraitModels.ceo2.src} name="Andry Ford" title="CEO At Whatever" />
+      <UserCard src={images.portraitModels.ceo3.src} name="Andry Ford" title="CEO At Whatever" />
+      <UserCard src={images.portraitModels.ceo4.src} name="Andry Ford" title="CEO At Whatever" />
+    </div>
+
+    <div class="flex flex-col gap-16 max-w-2xl mx-auto mt-32">
       <Testimonial
         user={{
           userImg: images.users.andry2.src,

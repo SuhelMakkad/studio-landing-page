@@ -1,0 +1,20 @@
+---
+import Image from "@/components/Image.astro";
+
+export interface Props {
+  src: string;
+  name: string;
+  title: string;
+}
+
+const { src, name, title } = Astro.props;
+---
+
+<div class="flex flex-col gap-4 text-center">
+  <Image class="w-80 shrink-0 block mx-auto" src={src} height={380} width={323} />
+
+  <div class="flex flex-col">
+    <span class="text-lg font-bold">{name}</span>
+    <span>{title}</span>
+  </div>
+</div>

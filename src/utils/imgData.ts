@@ -31,10 +31,30 @@ export const images = {
     },
   },
   portraitModels: {
-    gray: {
+    ceo1: {
       src: "/img/models/portrait/1.jpg",
       height: 518,
       width: 440,
+    },
+    ceo2: {
+      src: "/img/models/portrait/2.jpg",
+      height: 380,
+      width: 323,
+    },
+    ceo3: {
+      src: "/img/models/portrait/3.jpg",
+      height: 380,
+      width: 323,
+    },
+    ceo4: {
+      src: "/img/models/portrait/4.jpg",
+      height: 380,
+      width: 323,
+    },
+    ceo5: {
+      src: "/img/models/portrait/5.jpg",
+      height: 380,
+      width: 323,
     },
   },
 };
