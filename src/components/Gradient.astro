@@ -3,8 +3,9 @@ export type Pops = {
   height?: string;
 };
 
-const { height = "h-36" } = Astro.props;
+const { heightClass = "md:h-28 h-24" } = Astro.props;
 ---
 
-<div class={`${height} -z-10 bg-gradient-to-b from-amber-100 absolute top-0 left-0 right-0`}></div>
-<div class={height}></div>
+<div class={`${heightClass} -z-10 bg-gradient-to-b from-amber-100 absolute top-0 left-0 right-0`}>
+</div>
+<div class={heightClass}></div>
