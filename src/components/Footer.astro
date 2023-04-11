@@ -45,21 +45,22 @@ const linksLists = [
 ];
 ---
 
-<footer class="bg-neutral-800 text-neutral-400 text-lg mt-36 text-center md:text-start ">
+<footer class="bg-neutral-800 text-neutral-400 text-lg mt-36 text-center md:text-start">
   <section class="wrapper grid grid-cols-1 lg:grid-cols-2 gap-20 py-10">
     <div>
-      <div class="mb-8 lg:mb-12 text-white">
-        <a href="/">
-          <Logo />
-        </a>
-      </div>
+      <a class="block mb-8 lg:mb-12 text-white" href="/">
+        <Logo class="mx-auto lg:mx-0" />
+      </a>
+
       <p>
         The best design for your web studio website. Vitae nulla nunc euismod vel pretium tellus
         accumsan semper. Vitae nulla nunc euismod vel pretium tellus accumsan semper.
       </p>
     </div>
 
-    <ul class="flex flex-wrap gap-20 justify-center md:justify-between capitalize whitespace-nowrap">
+    <ul
+      class="flex flex-wrap gap-20 justify-center md:justify-between capitalize whitespace-nowrap"
+    >
       {
         linksLists.map((linksList) => (
           <li>
@@ -78,9 +79,11 @@ const linksLists = [
   </section>
 
   <span class="block border-t border-neutral-500"></span>
-  <section class="flex flex-col items-center md:flex-row-reverse justify-between gap-4 py-4 wrapper">
+  <section
+    class="flex flex-col items-center md:flex-row-reverse justify-between gap-4 py-4 wrapper"
+  >
     <LinkWithUnderline href="/" class="font-bold">Terms of Service</LinkWithUnderline>
-    
+
     <span>
       © <span id="copyright-year"></span> All Rights Reserved.
     </span>
