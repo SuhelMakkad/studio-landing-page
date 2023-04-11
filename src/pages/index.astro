@@ -74,7 +74,7 @@ import UserCard from "@/components/UserCard.astro";
     </div>
   </section>
 
-  <section class="no-wrapper bg-sky-100 py-40 rounded-b-lg">
+  <section class="no-wrapper bg-sky-100 py-40 rounded-b-3xl">
     <div class="wrapper md:grid grid-cols-2 gap-x-8 gap-y-40 space-y-8 md:space-y-0">
       <div class="self-center space-y-8">
         <header>
@@ -140,6 +140,87 @@ import UserCard from "@/components/UserCard.astro";
           ))
       }
     </CarouselWrapper>
+  </section>
+
+  <section class="no-wrapper bg-gradient-to-b from-amber-100 mt-40 relative rounded-t-3xl">
+    <svg
+      class="absolute right-0 top-0"
+      width="323"
+      height="392"
+      viewBox="0 0 323 392"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        opacity="0.2"
+        d="M616.232 259.445C408.086 487.939 154.137 371.156 188.138 177.155C196.212 131.086 270.986 -134.845 316.68 3.15511C343.306 83.7673 -92.8621 194.156 28.1381 -96.3435"
+        stroke="#FFC928"
+        stroke-width="8"></path>
+    </svg>
+
+    <div class="wrapper py-20">
+      <div class="max-w-2xl">
+        <Tag dark>Design concept</Tag>
+        <H2 class="mt-4">The best design for your studio website</H2>
+        <p class="text-lg mt-8">
+          Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum
+          malesuada a, duis volutpat. Convallis turpis erat tempus, viverra aliquet. Nullam viverra
+          nam auctor sit ipsum malesuada a, duis volutpat.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 mt-12 gap-10">
+        {
+          Array(4)
+            .fill(0)
+            .map((_, index) => (
+              <div class={`flex gap-4 ${index % 2 ? `-order-${index}` : ""}`}>
+                {index % 2 ? (
+                  <svg
+                    class="text-6xl text-neutral-400"
+                    width="1em"
+                    height="1em"
+                    viewBox="0 0 50 50"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M47.6268 23.7062C48.2466 24.4484 48.2466 25.5277 47.6268 26.2699L44.4812 30.0372C43.803 30.8493 43.4742 31.8971 43.5669 32.9512L44.0044 37.9287C44.0912 38.9165 43.4411 39.8188 42.4765 40.0491L38.0619 41.1031C36.9808 41.3612 36.0559 42.0575 35.5089 43.025L33.2053 47.099C32.6961 47.9995 31.5844 48.3631 30.6415 47.9375L26.6498 46.1358C25.6003 45.6621 24.3976 45.6636 23.3493 46.14L19.3597 47.9531C18.4161 48.3819 17.3014 48.0189 16.7912 47.1168L14.4911 43.0489C13.9441 42.0814 13.0192 41.3851 11.9381 41.127L7.52286 40.0728C6.55849 39.8426 5.90838 38.9406 5.99496 37.9529L6.43346 32.9505C6.52583 31.8968 6.19706 30.8494 5.5191 30.0375L2.37029 26.2665C1.75138 25.5253 1.75043 24.4477 2.36803 23.7054L5.52362 19.9127C6.1988 19.1012 6.52582 18.0557 6.43339 17.0041L5.99624 12.0308C5.90922 11.0408 6.56225 10.1372 7.52946 9.90904L11.9298 8.87123C13.0153 8.61522 13.9446 7.91765 14.4935 6.94684L16.7947 2.87709C17.3039 1.97664 18.4156 1.61302 19.3585 2.03858L23.3544 3.8422C24.4007 4.31444 25.5993 4.31444 26.6456 3.8422L30.6415 2.03858C31.5844 1.61301 32.6961 1.97663 33.2053 2.87709L35.5089 6.95112C36.0559 7.9186 36.9808 8.61486 38.0619 8.87297L42.4765 9.92701C43.4411 10.1573 44.0912 11.0596 44.0044 12.0474L43.5669 17.0249C43.4742 18.079 43.803 19.1268 44.4812 19.939L47.6268 23.7062ZM25 37.9326C26.8075 37.9326 28.2727 36.4674 28.2727 34.6599V34.4275C28.2727 32.6201 26.8075 31.1548 25 31.1548C23.1925 31.1548 21.7273 32.6201 21.7273 34.4275V34.6599C21.7273 36.4674 23.1925 37.9326 25 37.9326ZM25 28.377C26.8075 28.377 28.2727 26.9117 28.2727 25.1042V15.3162C28.2727 13.5087 26.8075 12.0435 25 12.0435C23.1925 12.0435 21.7273 13.5087 21.7273 15.3162V25.1042C21.7273 26.9117 23.1925 28.377 25 28.377Z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    class="text-6xl text-neutral-400"
+                    width="50"
+                    height="50"
+                    viewBox="0 0 50 50"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.999939 25C0.999939 11.8023 11.8022 1 24.9999 1C38.1977 1 48.9999 11.8023 48.9999 25C48.9999 38.1977 38.1977 49 24.9999 49C11.8022 49 0.999939 38.1977 0.999939 25ZM23.4035 29.2302L33.36 35.3573C34.7227 36.1959 36.5073 35.771 37.346 34.4082C38.1913 33.0346 37.7521 31.2351 36.3691 30.4053L28.2209 25.5164C27.6185 25.155 27.2499 24.504 27.2499 23.8014V14.375C27.2499 12.7872 25.9628 11.5 24.3749 11.5C22.7871 11.5 21.4999 12.7872 21.4999 14.375V25.8236C21.4999 27.2127 22.2206 28.5023 23.4035 29.2302Z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    />
+                  </svg>
+                )}
+
+                <div>
+                  <span class="font-bold text-2xl">
+                    Design {index % 2 ? "concept" : "websites"}
+                  </span>
+                  <p class="text-lg mt-4">
+                    Vitae nulla nunc euismod vel nunc euismod velpretium tellus accumsan nulla nunc
+                    euismod ve semper.
+                  </p>
+                </div>
+              </div>
+            ))
+        }
+      </div>
+    </div>
   </section>
 
   <section class="mt-40">
