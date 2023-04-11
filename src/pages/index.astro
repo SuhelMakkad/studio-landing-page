@@ -52,64 +52,66 @@ import UserCard from "@/components/UserCard.astro";
     />
   </section>
 
-  <section class="lg:grid grid-cols-3 grid-rows-6 mt-32 gap-x-6 lg:space-y-0">
-    <div class="col-span-1 row-start-2 row-end-5 hidden lg:block">
-      <Image {...images.portraitModels.ceo1} />
-    </div>
+  <section class="no-wrapper bg-gradient-to-t from-sky-100">
+    <div class="wrapper lg:grid grid-cols-3 grid-rows-6 mt-32 gap-x-6 lg:space-y-0">
+      <div class="col-span-1 row-start-2 row-end-5 hidden lg:block">
+        <Image {...images.portraitModels.ceo1} />
+      </div>
 
-    <header class="col-start-2 col-span-2 row-start-1 lg:ml-28 leading-loose">
-      <H2>Requirements gathering and analysis for references.</H2>
-    </header>
-
-    <p class="col-start-2 col-span-2 row-start-2 text-lg lg:ml-28 mt-6 mb-10 lg:my-0">
-      Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum malesuada
-      a, duis volutpat. Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit
-      ipsum malesuada a, duis volutpat.
-    </p>
-
-    <div class="row-start-4 col-span-2 row-span-3">
-      <Image {...images.landscapeModels.green} />
-    </div>
-  </section>
-
-  <section class="md:grid grid-cols-2 gap-8 mt-40 space-y-8 md:space-y-0">
-    <div class="self-center space-y-8">
-      <header>
+      <header class="col-start-2 col-span-2 row-start-1 lg:ml-28 leading-loose">
         <H2>Requirements gathering and analysis for references.</H2>
       </header>
-      <p class="text-lg">
+
+      <p class="col-start-2 col-span-2 row-start-2 text-lg lg:ml-28 mt-6 mb-10 lg:my-0">
         Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum malesuada
-        duis volutpat.
+        a, duis volutpat. Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor
+        sit ipsum malesuada a, duis volutpat.
       </p>
 
-      <div>
-        <LinkWithUnderline class="text-blue-500 font-bold" href="/">
-          Experianced team
-        </LinkWithUnderline>
+      <div class="row-start-4 col-span-2 row-span-3">
+        <Image {...images.landscapeModels.green} />
       </div>
     </div>
-
-    <Image class="self-center -order-1" {...images.products.tab} />
   </section>
 
-  <section class="md:grid grid-cols-2 gap-8 mt-40 space-y-8 md:space-y-0">
-    <div class="self-center space-y-8">
-      <header>
-        <H2>The best design for your studio website</H2>
-      </header>
-      <p class="text-lg">
-        Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum malesuada
-        duis volutpat.
-      </p>
+  <section class="no-wrapper bg-sky-100 py-40 rounded-b-lg">
+    <div class="wrapper md:grid grid-cols-2 gap-x-8 gap-y-40 space-y-8 md:space-y-0">
+      <div class="self-center space-y-8">
+        <header>
+          <H2>Requirements gathering and analysis for references.</H2>
+        </header>
+        <p class="text-lg">
+          Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum
+          malesuada duis volutpat.
+        </p>
 
-      <div>
-        <LinkWithUnderline class="text-blue-500 font-bold" href="/">
-          Experianced team
-        </LinkWithUnderline>
+        <div>
+          <LinkWithUnderline class="text-blue-500 font-bold" href="/">
+            Experianced team
+          </LinkWithUnderline>
+        </div>
       </div>
-    </div>
 
-    <Image class="self-center" {...images.products.watch} />
+      <Image class="self-center -order-1" {...images.products.tab} />
+
+      <div class="self-center space-y-8">
+        <header>
+          <H2>The best design for your studio website</H2>
+        </header>
+        <p class="text-lg">
+          Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum
+          malesuada duis volutpat.
+        </p>
+
+        <div>
+          <LinkWithUnderline class="text-blue-500 font-bold" href="/">
+            Experianced team
+          </LinkWithUnderline>
+        </div>
+      </div>
+
+      <Image class="self-center" {...images.products.watch} />
+    </div>
   </section>
 
   <section class="mt-40">
