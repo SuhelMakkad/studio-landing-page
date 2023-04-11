@@ -1,6 +1,7 @@
 ---
 import Logo from "@/components/Logo.astro";
 import LinkWithUnderline from "@/components/LinkWithUnderline.astro";
+import { PORTFOLIO_URL } from "@/utils/index";
 
 const linksLists = [
   {
@@ -82,8 +83,12 @@ const linksLists = [
   <section
     class="flex flex-col items-center md:flex-row-reverse justify-between gap-4 py-4 wrapper"
   >
-    <LinkWithUnderline href="#" class="font-bold">Terms of Service</LinkWithUnderline>
-
+    <span>
+      Made by
+      <LinkWithUnderline href={PORTFOLIO_URL} target={"_blank"} class="font-bold">
+        Suhel Makkad
+      </LinkWithUnderline>
+    </span>
     <span>
       © <span id="copyright-year"></span> All Rights Reserved.
     </span>
