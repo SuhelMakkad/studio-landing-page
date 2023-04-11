@@ -1,0 +1,15 @@
+---
+export type Props = {
+  title: string;
+  description: string;
+};
+
+const { title, description } = Astro.props;
+---
+
+<div class="relative flex flex-col gap-3 rounded-lg p-6 transition-shadow shadow-smooth-xl">
+  <span class="text-3xl font-semibold">{title}</span>
+  <span class="text-lg">{description}</span>
+  
+  <slot />
+</div>

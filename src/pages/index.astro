@@ -3,20 +3,21 @@ import { images } from "@/utils/imgData";
 
 import Layout from "@/layouts/Layout.astro";
 import Gradient from "@/components/Gradient.astro";
-import H1 from "@/components/heading/H1.astro";
-import H2 from "@/components/heading/H2.astro";
 import Button from "@/components/Button.astro";
-import Tag from "@/components/heading/Tag.astro";
 import Image from "@/components/Image.astro";
 import Testimonial from "@/components/Testimonial.astro";
 import LinkWithUnderline from "@/components/LinkWithUnderline.astro";
-import Card from "@/components/Card.astro";
 import CarouselWrapper from "@/components/carousel/CarouselWrapper.astro";
 import CarouselItem from "@/components/carousel/CarouselItem.astro";
 import LandscapeBanner from "@/components/LandscapeBanner.astro";
+import H1 from "@/components/heading/H1.astro";
+import H2 from "@/components/heading/H2.astro";
+import Tag from "@/components/heading/Tag.astro";
+import Card from "@/components/card/Card.astro";
+import UserCard from "@/components/card/UserCard.astro";
 
 import "@/styles/global.css";
-import UserCard from "@/components/UserCard.astro";
+import CardWithFooter from "@/components/card/CardWithFooter.astro";
 ---
 
 <Layout title="Home">
@@ -135,7 +136,11 @@ import UserCard from "@/components/UserCard.astro";
               <Card
                 title={`Name ${index + 1}`}
                 description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem maiores rerum eum magnam dolorem consequuntur sequi dolore obcaecati molestias enim tempore nemo aut et, accusamus perspiciatis dolores ullam delectus pariatur."
-              />
+              >
+                <LinkWithUnderline class="text-blue-500 font-semibold">
+                  Experienced team
+                </LinkWithUnderline>
+              </Card>
             </CarouselItem>
           ))
       }
@@ -221,6 +226,37 @@ import UserCard from "@/components/UserCard.astro";
         }
       </div>
     </div>
+  </section>
+
+  <section class="mt-40">
+    <H2 class="max-w-2xl">The best design for your studio website</H2>
+
+    <ul class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <li>
+        <CardWithFooter
+          title="Audit"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing Ac aliquam ac volutpat, viverra magna risus aliquam massa. Ac aliquam ac volutpat, viverra magna risus."
+        >
+          <span class="font-semibold text-neutral-400"> Experienced team</span>
+        </CardWithFooter>
+      </li>
+      <li>
+        <CardWithFooter
+          title="Teamwork"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing Ac aliquam ac volutpat, viverra magna risus aliquam massa. Ac aliquam ac volutpat, viverra magna risus."
+        >
+          <span class="font-semibold text-neutral-400"> Experienced team</span>
+        </CardWithFooter>
+      </li>
+      <li>
+        <CardWithFooter
+          title="Create"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing Ac aliquam ac volutpat, viverra magna risus aliquam massa. Ac aliquam ac volutpat, viverra magna risus."
+        >
+          <span class="font-semibold text-neutral-400"> Experienced team</span>
+        </CardWithFooter>
+      </li>
+    </ul>
   </section>
 
   <section class="mt-40">
