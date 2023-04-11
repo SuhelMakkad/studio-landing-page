@@ -1,6 +1,7 @@
 ---
 import Navbar from "@/components/Navbar.astro";
 import Footer from "@/components/Footer.astro";
+import { PROJECT_BASE } from "@/utils/index";
 
 export interface Props {
   title: string;
@@ -14,7 +15,7 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={`${PROJECT_BASE}/favicon.svg`} />
     <meta name="generator" content={Astro.generator} />
     <title>{title} | Space</title>
   </head>

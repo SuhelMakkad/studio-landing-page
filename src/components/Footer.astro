@@ -48,7 +48,7 @@ const linksLists = [
 <footer class="bg-neutral-800 text-neutral-400 text-lg mt-36 text-center md:text-start">
   <section class="wrapper grid grid-cols-1 lg:grid-cols-2 gap-20 py-10">
     <div>
-      <a class="block mb-8 lg:mb-12 text-white" href="/">
+      <a class="block mb-8 lg:mb-12 text-white" href="#">
         <Logo class="mx-auto lg:mx-0" />
       </a>
 
@@ -68,7 +68,7 @@ const linksLists = [
             <ul class="font-semibold space-y-1">
               {linksList.links.map((link) => (
                 <li>
-                  <LinkWithUnderline href="/">{link.label}</LinkWithUnderline>
+                  <LinkWithUnderline href="#">{link.label}</LinkWithUnderline>
                 </li>
               ))}
             </ul>
@@ -82,7 +82,7 @@ const linksLists = [
   <section
     class="flex flex-col items-center md:flex-row-reverse justify-between gap-4 py-4 wrapper"
   >
-    <LinkWithUnderline href="/" class="font-bold">Terms of Service</LinkWithUnderline>
+    <LinkWithUnderline href="#" class="font-bold">Terms of Service</LinkWithUnderline>
 
     <span>
       © <span id="copyright-year"></span> All Rights Reserved.
