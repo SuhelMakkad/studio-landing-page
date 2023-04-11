@@ -259,43 +259,79 @@ import CardWithFooter from "@/components/card/CardWithFooter.astro";
     </ul>
   </section>
 
-  <section class="mt-40">
-    <div class="text-center max-w-2xl mx-auto">
-      <header class="mb-4">
-        <H2>Our leadership</H2>
-      </header>
-      <p class="text-lg">
-        Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum malesuada
-        a, duis volutpat.
-      </p>
-    </div>
+  <section class="no-wrapper mt-40">
+      <div class="wrapper text-center max-w-2xl mx-auto">
+        <header class="mb-4">
+          <H2>Our leadership</H2>
+        </header>
+        <p class="text-lg">
+          Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum
+          malesuada a, duis volutpat.
+        </p>
+      </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 justify-center gap-4 mt-24">
-      <UserCard src={images.portraitModels.ceo5.src} name="Andry Ford" title="CEO At Whatever" />
-      <UserCard src={images.portraitModels.ceo2.src} name="Andry Ford" title="CEO At Whatever" />
-      <UserCard src={images.portraitModels.ceo3.src} name="Andry Ford" title="CEO At Whatever" />
-      <UserCard src={images.portraitModels.ceo4.src} name="Andry Ford" title="CEO At Whatever" />
-    </div>
 
-    <div class="flex flex-col gap-16 max-w-2xl mx-auto mt-32">
-      <Testimonial
-        user={{
-          userImg: images.users.andry2.src,
-          name: "andry ford",
-          title: "CEO at Whatever",
-        }}
-        message="“Every single person comes away and says - wow that's a really slick experience, that was so easy to use. I feel so much less stressed as I now know we're doing everything by the book.”"
-      />
+      <div class="wrapper grid md:grid-cols-2 lg:grid-cols-4 justify-center gap-4 mt-24">
+        <UserCard src={images.portraitModels.ceo5.src} name="Andry Ford" title="CEO At Whatever" />
+        <UserCard src={images.portraitModels.ceo2.src} name="Andry Ford" title="CEO At Whatever" />
+        <UserCard src={images.portraitModels.ceo3.src} name="Andry Ford" title="CEO At Whatever" />
+        <UserCard src={images.portraitModels.ceo4.src} name="Andry Ford" title="CEO At Whatever" />
+      </div>
 
-      <Testimonial
-        user={{
-          userImg: images.users.andry.src,
-          name: "andry ford",
-          title: "CEO at Whatever",
-        }}
-        message="“I feel so much less stressed ❤️ as I now know we're doing everything by the book.”"
-      />
-    </div>
+      
+      <div class="relative">
+        <svg
+        class="absolute left-0 top-0 max-h-full"
+        width="111"
+        height="522"
+        viewBox="0 0 111 522"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          opacity="0.1"
+          d="M-61.408 7.11033C248.037 150.681 46.2201 344.496 -49.674 314.27C-111.587 294.756 -98.2083 237.448 -60.9352 241.906C-23.6621 246.364 133.183 410.42 -88.6941 515.295"
+          stroke="#0E6FFF"
+          stroke-width="8"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+  
+      <svg
+        class="absolute right-0 bottom-0 max-h-full"
+        width="177"
+        height="429"
+        viewBox="0 0 177 429"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          opacity="0.2"
+          d="M268.03 415.515C-36.5976 467.824 -26.1651 184.154 58.8939 155.559C113.811 137.097 142.235 194.5 113.948 211.944C85.6599 229.387 53.2583 6.89075 251.414 6.89207"
+          stroke="#FFC928"
+          stroke-width="8"></path>
+      </svg>
+
+      <div class="flex flex-col gap-16 max-w-2xl mx-auto mt-32">
+        <Testimonial
+          user={{
+            userImg: images.users.andry2.src,
+            name: "andry ford",
+            title: "CEO at Whatever",
+          }}
+          message="“Every single person comes away and says - wow that's a really slick experience, that was so easy to use. I feel so much less stressed as I now know we're doing everything by the book.”"
+        />
+
+        <Testimonial
+          user={{
+            userImg: images.users.andry.src,
+            name: "andry ford",
+            title: "CEO at Whatever",
+          }}
+          message="“I feel so much less stressed ❤️ as I now know we're doing everything by the book.”"
+        />
+      </div>
+      </div>
   </section>
 
   <section class="mt-40">
