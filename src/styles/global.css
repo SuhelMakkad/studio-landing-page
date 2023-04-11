@@ -33,6 +33,27 @@
   }
 }
 
+:root {
+  --scroll-size: 8px;
+  --scroll-thumb-color: #7dd3fc;
+  --scroll-bg-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: var(--scroll-size);
+  height: var(--scroll-size)
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--scroll-bg-color);
+  border-radius: 5px
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb-color);
+  border-radius: 5px
+}
+
 main > section:not(.no-wrapper) {
   @apply wrapper;
 }
