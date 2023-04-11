@@ -15,9 +15,12 @@ import H2 from "@/components/heading/H2.astro";
 import Tag from "@/components/heading/Tag.astro";
 import Card from "@/components/card/Card.astro";
 import UserCard from "@/components/card/UserCard.astro";
+import CardWithFooter from "@/components/card/CardWithFooter.astro";
+import SquigglyLine1 from "@/components/icon/SquigglyLine1.astro";
+import SquigglyLine2 from "@/components/icon/SquigglyLine2.astro";
+import SquigglyLine3 from "@/components/icon/SquigglyLine3.astro";
 
 import "@/styles/global.css";
-import CardWithFooter from "@/components/card/CardWithFooter.astro";
 ---
 
 <Layout title="Home">
@@ -148,20 +151,8 @@ import CardWithFooter from "@/components/card/CardWithFooter.astro";
   </section>
 
   <section class="no-wrapper bg-gradient-to-b from-amber-100 mt-40 relative rounded-t-3xl">
-    <svg
-      class="absolute right-0 top-0"
-      width="323"
-      height="392"
-      viewBox="0 0 323 392"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        opacity="0.2"
-        d="M616.232 259.445C408.086 487.939 154.137 371.156 188.138 177.155C196.212 131.086 270.986 -134.845 316.68 3.15511C343.306 83.7673 -92.8621 194.156 28.1381 -96.3435"
-        stroke="#FFC928"
-        stroke-width="8"></path>
-    </svg>
+   
+    <SquigglyLine1 class="absolute right-0 top-0" />
 
     <div class="wrapper py-20">
       <div class="max-w-2xl">
@@ -280,37 +271,9 @@ import CardWithFooter from "@/components/card/CardWithFooter.astro";
 
       
       <div class="relative">
-        <svg
-        class="absolute left-0 top-0 max-h-full"
-        width="111"
-        height="522"
-        viewBox="0 0 111 522"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          opacity="0.1"
-          d="M-61.408 7.11033C248.037 150.681 46.2201 344.496 -49.674 314.27C-111.587 294.756 -98.2083 237.448 -60.9352 241.906C-23.6621 246.364 133.183 410.42 -88.6941 515.295"
-          stroke="#0E6FFF"
-          stroke-width="8"
-          stroke-linecap="round"
-          stroke-linejoin="round"></path>
-      </svg>
-  
-      <svg
-        class="absolute right-0 bottom-0 max-h-full"
-        width="177"
-        height="429"
-        viewBox="0 0 177 429"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          opacity="0.2"
-          d="M268.03 415.515C-36.5976 467.824 -26.1651 184.154 58.8939 155.559C113.811 137.097 142.235 194.5 113.948 211.944C85.6599 229.387 53.2583 6.89075 251.414 6.89207"
-          stroke="#FFC928"
-          stroke-width="8"></path>
-      </svg>
+      <SquigglyLine2 class="absolute left-0 top-0 max-h-full" />
+
+      <SquigglyLine3 class="absolute left-0 top-0 max-h-full" />
 
       <div class="flex flex-col gap-16 max-w-2xl mx-auto mt-32">
         <Testimonial
