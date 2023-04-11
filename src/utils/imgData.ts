@@ -1,6 +1,6 @@
 import { PROJECT_BASE } from ".";
 
-const imageBaseUrl = `${PROJECT_BASE}img`
+const imageBaseUrl = `${PROJECT_BASE}/img`
 
 export const images = {
   users: {
