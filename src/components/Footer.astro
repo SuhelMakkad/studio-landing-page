@@ -1,7 +1,7 @@
 ---
 import Logo from "@/components/Logo.astro";
 import LinkWithUnderline from "@/components/LinkWithUnderline.astro";
-import { PORTFOLIO_URL } from "@/utils/index";
+import { PORTFOLIO_URL, DESIGN_URL } from "@/utils/index";
 
 const linksLists = [
   {
@@ -84,13 +84,17 @@ const linksLists = [
     class="flex flex-col items-center md:flex-row-reverse justify-between gap-4 py-4 wrapper"
   >
     <span>
+      Design from
+      <LinkWithUnderline href={DESIGN_URL} target={"_blank"} class="font-semibold">
+        uistore
+      </LinkWithUnderline>
+    </span>
+
+    <span>
       Made by
       <LinkWithUnderline href={PORTFOLIO_URL} target={"_blank"} class="font-semibold">
         Suhel Makkad
       </LinkWithUnderline>
-    </span>
-    <span>
-      © <span id="copyright-year"></span> All Rights Reserved.
     </span>
   </section>
 </footer>
