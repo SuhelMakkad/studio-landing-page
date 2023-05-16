@@ -25,6 +25,10 @@ const linksLists = [
     title: "Demos",
     links: [
       {
+        label: "Source Code",
+        href: "https://github.com/SuhelMakkad/studio-landing-page",
+      },
+      {
         label: "Dark theme",
       },
       {
@@ -69,7 +73,7 @@ const linksLists = [
             <ul class="font-semibold space-y-1">
               {linksList.links.map((link) => (
                 <li>
-                  <LinkWithUnderline href="#">{link.label}</LinkWithUnderline>
+                  <LinkWithUnderline href={link.href ?? "#"}>{link.label}</LinkWithUnderline>
                 </li>
               ))}
             </ul>
